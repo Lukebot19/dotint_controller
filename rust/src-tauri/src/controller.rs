@@ -64,7 +64,28 @@ impl Controller {
     }
 
     pub async fn set_power(&self, state: bool) -> Result<(), Box<dyn Error>> {
-        let data: [u8; 3] = if state { [204, 35, 51] } else { [204, 36, 51] };
+        let data: [u8; 20] = if state {[
+            205,
+            80,
+            128,
+            96,
+            0,
+            10 & 0xFF,
+            10 & 0xFF,
+            10 & 0xFF,
+            0,
+            255,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18
+        ] } else {[205, 80, 144, 96, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 18]};
         self.peripheral
             .as_ref()
             .unwrap()
@@ -78,14 +99,27 @@ impl Controller {
     }
 
     pub async fn set_rgb(&self, r: u8, g: u8, b: u8) -> Result<(), Box<dyn Error>> {
-        let args: [u8; 7] = [
-            86,
-            r,
-            g,
-            b,
-            (10 * 255 / 100) as u8 & 0xFF,
-            255 - 15,
-            255 - 85,
+        let args: [u8; 20] = [
+            205,
+            80,
+            128,
+            96,
+            0,
+            g & 0xFF,
+            b & 0xFF,
+            r & 0xFF,
+            0,
+            255,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18
         ];
         let values: Vec<u8> = args.to_vec();
 

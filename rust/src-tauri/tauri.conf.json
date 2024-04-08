@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "happy",
+    "productName": "DoTint Controller",
     "version": "1.0.3"
   },
   "tauri": {
@@ -26,13 +26,9 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.happy.dev",
+      "identifier": "com.DoTint.dev",
       "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
+        "icons/icon.png"
       ]
     },
     "security": {
@@ -44,7 +40,7 @@
         "visible": true,
         "fullscreen": false,
         "resizable": true,
-        "title": "happy",
+        "title": "DoTint Controller",
         "width": 1440,
         "height": 900
       }

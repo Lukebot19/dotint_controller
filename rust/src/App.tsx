@@ -189,27 +189,7 @@ function App() {
                 className="w-full h-[50px] mt-3"
               ></input>
             </div>
-            <div className="mt-8 text-start">
-              <span className="">Set Mode</span>
-              <select
-                onChange={async (e) => {
-                  await invoke('set_mode', {mode: Number(e.target.value)})
-                  // await api.post("/set_mode", {
-                  //   value: Number(e.target.value),
-                  // });
-                }}
-                className="select w-full max-w-xs mt-3"
-              >
-                <option disabled selected>
-                  Select Mode
-                </option>
-                {modes && modes?.map?.((m: any) => (
-                  <option key={m.name} value={m.value}>
-                    {m.name}
-                  </option>
-                ))}
-              </select>
-            </div>
+            
             <div className="mt-8 text-start flex flex-col">
               <span className="">Screen Sync</span>
               <button

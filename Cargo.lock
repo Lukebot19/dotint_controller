@@ -3,6 +3,30 @@
 version = 3
 
 [[package]]
+name = "DoTint"
+version = "0.0.0"
+dependencies = [
+ "btleplug",
+ "enum_primitive",
+ "env_logger",
+ "futures",
+ "log",
+ "msgbox",
+ "num_enum 0.7.2",
+ "rand 0.8.5",
+ "scrap",
+ "serde",
+ "serde_json",
+ "strum",
+ "strum_macros",
+ "tauri",
+ "tauri-build",
+ "tokio",
+ "tokio-util",
+ "uuid",
+]
+
+[[package]]
 name = "addr2line"
 version = "0.21.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1325,30 +1349,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 1.0.109",
-]
-
-[[package]]
-name = "happy"
-version = "0.0.0"
-dependencies = [
- "btleplug",
- "enum_primitive",
- "env_logger",
- "futures",
- "log",
- "msgbox",
- "num_enum 0.7.2",
- "rand 0.8.5",
- "scrap",
- "serde",
- "serde_json",
- "strum",
- "strum_macros",
- "tauri",
- "tauri-build",
- "tokio",
- "tokio-util",
- "uuid",
 ]
 
 [[package]]
